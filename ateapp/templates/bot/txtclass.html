@@ -1,0 +1,33 @@
+{% extends 'bot/base.html' %}
+
+{% block js %}
+  <script type="text/javascript" src="/static/js/script-txt.js"></script>
+{% endblock %}
+
+{% block content %}
+{%load static %}
+<link href="{% static 'css/templatemo_style.css'%}" rel="stylesheet" type="text/css" />
+       {%include 'navbaritems.html'%}
+<br>
+
+  <div id="app" class="container top-padding">
+      <h1>Text classification to positive and negative !!!</h1>
+          			<div class="card col-md-6" v-for="message in messages" v-bind:class="{'chat-message': message.chat_bot, 'col-md-offset-3 bg-success ': message.chat_bot}">
+	  				[[message.text]]
+	  			
+	  		
+  	</div>
+  	<div id="text-box" class="row top-padding">
+  			<textarea class="form-control" v-bind:placeholder="placeholder" v-model="input" v-bind:class="{ 'border-danger': send_blank}" v-on:change="check_content"></textarea>
+        <br>
+      <button type="submit" class="btn btn-success"  v-on:click="add_message"> Envoyer </button>
+
+  		</div>
+
+  </div>
+  <br>
+         {%include 'footer.html'%}
+
+    
+{% endblock %}
+

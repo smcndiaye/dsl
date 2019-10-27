@@ -1,0 +1,27 @@
+#Mslider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#Mslider .Mslides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#Mslider .Mslide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+}
+
+/* helper css, since we don't have images */
+.Mslide1 {background: red;}
+.Mslide2 {background: blue;}
+.Mslide3 {background: green;}
+.Mslide4 {background: purple;}
+.Mslide5 {background: pink;}

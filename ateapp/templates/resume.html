@@ -1,0 +1,61 @@
+<!DOCTYPE html 
+             PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DSL</title>
+<meta name="keywords" content="css templates, fortune website, CSS, HTML" />
+
+<meta name="description" content="Fortune Template is a free css template from templatemo.com"/>
+{%load static %}
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css"  media="screen,projection"  />
+<link href="{% static 'css/materialize.css'%}" rel="stylesheet" type="text/css"  media="screen,projection" />
+
+
+</head>
+       {%include 'navbaritems.html'%}
+
+<div class="container" style="max-width:1500px; min-height:100%">
+          
+  <div class="row">
+
+
+      <a href="#" class="waves-effect waves-light" style="color:#000">
+      <div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+        <div class="card-image">
+          
+          <br><span class="card-title"><h5><strong> Data Science </strong></h5></span>
+        </div>
+        <div class="card-content">
+          <h6><strong> NDIAYE Mouhamadou </strong> </h6>
+          <li>Adress : 10 rue des châteaux bruloir 95000 Cergy France</li>
+                <li>Mail : m.cair44@gmail.com</li>
+                <p href="https://www.linkedin.com/in/mouhamadou-ndiaye-5b54b8124/" >Linkedin</p>
+                <h5><strong>SKILLS.</strong> </h5>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>R</li>
+              </div>
+            <h5><strong> FORMATION </strong> </h5>
+            <h6>Master: Econometrics, Statistics and Modeling Applied University of Mouhamed V Rabat Morocco 2016-2018</h6>
+        </div>
+        <div class="card-action right-align">
+         
+        </div>
+            </div>
+            </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+       {%include 'footer.html'%}
+
+  </body>
+</html>

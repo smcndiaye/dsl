@@ -1,0 +1,234 @@
+{% extends 'rpd/base.html' %}
+
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+
+<div class="container">
+  <div class="row justify-content-md-center">
+
+  <div class="card" style="width: 45rem;"> 
+  <div class="card-body">
+
+<div id="userActions">
+  <p>Image</p>
+  <input type="file" name="myfile"  id="fileUpload" />
+
+<img id="imgPrime" src="" alt="uploaded image placeholder" />
+</div>
+
+</div>
+<br>
+<button type="submit" class="btn btn-success" >
+
+<h2>Predict</h2>
+</button>
+  </form>
+  </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row justify-content-md-center">
+
+  <div class="card" style="width: 45rem;"> 
+  <div class="card-body">
+
+<canvas id="myChart" width="500" height="400"></canvas>
+      
+
+<script>
+{% block jquery %}
+
+var defaultData = []
+var labels = ['w','s','e','r','g'];
+var mydata = '{{ results }}'
+console.log(mydata)
+
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['No DR', 'Mild', 'Moderate', 'Severe', 'Proliferative DR'],
+        datasets: [{
+            label: 'Diabetic Retinopathy',
+            data: [{% for temp in results %} {{temp}}, {% endfor %}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+                           ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+                          ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+// var ctx = document.getElementById("myChart");
+{% endblock %}
+</script>
+
+
+
+
+  </div>
+  </div>
+
+
+  </div>
+</div>
+
+
+
+<style type="text/css">
+  
+  *{ margin: 0; padding: 0; }
+body{ 
+  background-color: #37474F; 
+  font-family: Arial, sans-serif;
+  padding: 15px;
+}
+.error{ color: #B71C1C; }
+#userActions{
+  display: table-cell;
+  height: 150px;
+  width: 450px;
+  vertical-align: middle;
+  text-align: center;
+  color: #37474F;
+  background-color: #FFFFFF;
+  border: solid 2px #333333;
+  border-radius: 10px;
+}
+#userActions input{
+  width: 150px;
+  margin: auto;
+}
+#imgPrime{ display: none; }
+.gfg { 
+                width:auto; 
+                text-align:center; 
+                padding:20px; 
+            } 
+            img { 
+                width: 100%; 
+                height: 100%; 
+                object-fit: contain; 
+            } 
+
+</style>
+
+
+<script type="text/javascript">
+  
+  'use strict';
+/**
+// ||||||||||||||||||||||||||||||| \\
+//  Global Object $: Generic controls
+// ||||||||||||||||||||||||||||||| \\
+**/
+(function(){
+  // http://stackoverflow.com/questions/4083351/what-does-jquery-fn-mean
+  var $ = function( elem ){
+    if (!(this instanceof $)){
+      return new $(elem);
+    }
+    this.el = document.getElementById( elem );
+  };
+  window.$ = $;
+  $.prototype = {
+    onChange : function( callback ){
+      this.el.addEventListener('change', callback );
+      return this;
+    }
+  };
+})();
+
+/**
+// ||||||||||||||||||||||||||||||| \\
+//  Drag and Drop code for Upload
+// ||||||||||||||||||||||||||||||| \\
+**/
+var dragdrop = {
+  init : function( elem ){
+    elem.setAttribute('ondrop', 'dragdrop.drop(event)');
+    elem.setAttribute('ondragover', 'dragdrop.drag(event)' );
+  },
+  drop : function(e){
+    e.preventDefault();
+    var file = e.dataTransfer.files[0];
+    runUpload( file );
+  },
+  drag : function(e){
+    e.preventDefault();
+  }
+};
+
+/**
+// ||||||||||||||||||||||||||||||| \\
+//  Code to capture a file (image) 
+//  and upload it to the browser
+// ||||||||||||||||||||||||||||||| \\
+**/
+function runUpload( file ) {
+  // http://stackoverflow.com/questions/12570834/how-to-preview-image-get-file-size-image-height-and-width-before-upload
+  if( file.type === 'image/png'  || 
+      file.type === 'image/jpg'  || 
+      file.type === 'image/jpeg' ||
+      file.type === 'image/gif'  ||
+      file.type === 'image/bmp'  ){
+    var reader = new FileReader(),
+        image = new Image();
+    reader.readAsDataURL( file );
+    reader.onload = function( _file ){
+      $('imgPrime').el.src = _file.target.result;
+      $('imgPrime').el.style.display = 'inline';
+    } // END reader.onload()
+  } // END test if file.type === image
+}
+
+/**
+// ||||||||||||||||||||||||||||||| \\
+//  window.onload fun
+// ||||||||||||||||||||||||||||||| \\
+**/
+window.onload = function(){
+  if( window.FileReader ){
+    // Connect the DIV surrounding the file upload to HTML5 drag and drop calls
+    dragdrop.init( $('userActions').el );
+    //  Bind the input[type="file"] to the function runUpload()
+    $('fileUpload').onChange(function(){ runUpload( this.files[0] ); });
+  }else{
+    // Report error message if FileReader is unavilable
+    var p   = document.createElement( 'p' ),
+        msg = document.createTextNode( 'Sorry, your browser does not support FileReader.' );
+    p.className = 'error';
+    p.appendChild( msg );
+    $('userActions').el.innerHTML = '';
+    $('userActions').el.appendChild( p );
+  }
+};
+
+</script>
+ {%include 'footer.html'%}
+{% endblock content %}
+  

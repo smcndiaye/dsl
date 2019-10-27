@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+<body>
+           {%include 'navbaritems.html'%}
+<div class="row">
+  <!-- size 4 on a large screen, 12 on a small, 6 on a med -->
+    <div class="col l4 s12 m6">
+<canvas id="myChart" width="10" height="3"></canvas>
+</div>
+</div>
+
+<script type="text/javascript">
+
+/* function to save JSON to file from browser
+* adapted from http://bgrins.github.io/devtools-snippets/#console-save
+* @param {Object} data -- json object to save
+* @param {String} file -- file name to save to 
+*/ 
+//52.41072 4.84239
+//key_api = VvuCSJVgZlxgfLZ8Gi32GbcTlAnPKmtu ; C5WDU2PJTHJ9KBHK
+
+var jsonUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&outputsize=compact&apikey=C5WDU2PJTHJ9KBHK";
+var request = new XMLHttpRequest();
+var mdata  = new Array();
+var mytime = new Array();
+
+request.open("GET", jsonUrl);
+request.send();
+
+request.addEventListener("load", function() {
+
+var response = JSON.parse(request.responseText);
+
+for (var i = 0; i < 100; i++){ 
+  var time = Object.keys(response['Time Series (Daily)'])[i]
+  var price = parseFloat(response['Time Series (Daily)'][time]['4. close'])
+  console.log(response['Meta Data']['2. Symbol'])
+mdata.push(price);
+mytime.push(time) ;
+window.mytime = mytime.sort();
+//var  = mytime.reverse();
+window.mdata = mdata.reverse();
+//console.log(mdata)
+
+}});
+ 
+
+
+
+</script>
+
+<script type="text/javascript">
+    
+//setInterval(datapi,5000)
+//clearTimeout(5000);
+
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels:mytime,
+            datasets: [{
+                label: 'MSFT Closing price',
+                data: mdata,
+                backgroundColor: '#cc65fe',
+                
+
+            }]
+        },
+
+    });
+
+
+//setTimout(datapi,5000)
+
+
+
+</script>
+           {%include 'footer.html'%}
+
+</body>
+
+</html>

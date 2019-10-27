@@ -1,0 +1,88 @@
+<!DOCTYPE html 
+             PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DSL</title>
+<meta name="keywords" content="css templates, fortune website, CSS, HTML" />
+
+<meta name="description" content="Fortune Template is a free css template from templatemo.com"/>
+{%load static %}
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css"  media="screen,projection"  />
+<link href="{% static 'css/materialize.css'%}" rel="stylesheet" type="text/css"  media="screen,projection" />
+
+
+</head>
+       {%include 'navbaritems.html'%}
+
+	<div class="container" style="max-width:1500px; min-height:100%">
+
+
+
+					
+	<div class="row">
+	<!-- size 4 on a large screen, 12 on a small, 6 on a med -->
+        <div class="col l4 s12 m6">
+          <a href="/chat/" class="waves-effect waves-light" style="color:#000">
+            <div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+              <div class="card-image">
+                <img class="responsive-img" src="/static/images/bot.jpg" style="width:250px">
+                <br><span class="card-title"><h5><strong> ChatBot</strong> </h5></span>
+              </div>
+              <div class="card-content">
+                <p>Teach a machine to understand and talk to Human using natural language .</p>
+              </div>
+              <div class="card-action right-align">
+                <a href="/chat/" class="waves-effect waves-light btn" style="color:#ffffff; background-color:#2353D6">View</a>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+		<div class="col l4 s12 m6">
+			<a href="/display/" class="waves-effect waves-light" style="color:#000">
+			<div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+				<div class="card-image">
+				  <img class="responsive-img" src="/static/images/txt.png" style="width:250px">
+				  <br><span class="card-title"><h5><strong> Text Classification </strong></h5></span>
+				</div>
+				<div class="card-content">
+				  <p>Sentiment analysis and text classification By using Natural Language Processing (NLP).</p>
+				</div>
+				<div class="card-action right-align">
+				  <a href="/display/" class="waves-effect waves-light btn" style="color:#ffffff; background-color:#2353D6">View</a>
+				</div>
+            </div>
+            </a>
+		</div>
+
+
+
+
+
+
+
+		<div class="col l4 s12 m6">
+			<a href="#" class="waves-effect waves-light" style="color:#000">
+			<div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+				<div class="card-image">
+				  <img class="responsive-img" src="/static/images/translation.gif" style="width:250px">
+				  <br><span class="card-title"><h6><strong>NLT</strong></h6></span>
+				</div>
+				<div class="card-content">
+				  <p>Translating language to another using Neural Machine Translation.</p>
+				</div>
+				<div class="card-action right-align">
+				  <a href="#" class="waves-effect waves-light btn" style="color:#ffffff; background-color:#2353D6">View</a>
+				</div>
+            </div>
+            </a>
+		</div>
+
+
+
+       {%include 'footer.html'%}
+
+  </body>
+</html>

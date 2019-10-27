@@ -1,0 +1,65 @@
+<!DOCTYPE html 
+             PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DSL</title>
+<meta name="keywords" content="css templates, fortune website, CSS, HTML" />
+
+<meta name="description" content="Fortune Template is a free css template from templatemo.com" />
+{%load static %}
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css"  media="screen,projection"  />
+<link href="{% static 'css/materialize.css'%}" rel="stylesheet" type="text/css"  media="screen,projection" />
+
+
+</head>
+       {%include 'navbaritems.html'%}
+
+	<div class="container" style="max-width:1500px; min-height:100%">
+
+
+
+					
+	<div class="row">
+	<!-- size 4 on a large screen, 12 on a small, 6 on a med -->
+        <div class="col l4 s12 m6">
+          <a href="/Globe/" class="waves-effect waves-light" style="color:#000">
+            <div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+              <div class="card-image">
+                <img class="responsive-img" src="/static/images/globe.jpg" style="width:250px">
+                <br><span class="card-title"><h5><strong>Search </strong> </h5></span>
+              </div>
+              <div class="card-content">
+                <p>Simple demonstration of visualizing geodata in 3D dimension here i'add live weather data of some France cities take a look !.</p>
+              </div>
+              <div class="card-action right-align">
+                <a href="/Globe/" class="waves-effect waves-light btn" style="color:#ffffff; background-color:#2353D6">View</a>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        
+ <div class="col l4 s12 m6">
+          <a href="/data/" class="waves-effect waves-light" style="color:#000">
+            <div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+              <div class="card-image">
+                <img class="responsive-img" src="/static/images/finance.jpg" style="width:250px">
+                <br><span class="card-title"><h5><strong>Finance </strong> </h5></span>
+              </div>
+              <div class="card-content">
+                <p>Visualizing Microsoft stock data with Daily variation. If the graph do not show just click on the top legend .</p>
+              </div>
+              <div class="card-action right-align">
+                <a href="/data/" class="waves-effect waves-light btn" style="color:#ffffff; background-color:#2353D6">View</a>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+
+ {%include 'footer.html'%}
+
+  </body>
+</html>

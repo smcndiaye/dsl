@@ -1,0 +1,352 @@
+{"intents": [
+        {"tag": "1",
+         "patterns": ["Hi","Is anyone there?", "Hello"],
+         "responses": ["Hi", "Hello", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "2",
+         "patterns": ["Who are you","What is you name","Do you have a name"],
+         "responses": ["Hi, I'm slack", "My name is slack", "I'm Slack"],
+         "context_set": ""
+        },
+        {"tag": "5",
+         "patterns": ["How is the weather today"],
+         "responses": ["It's sunny day"],
+         "context_set": ""
+        },
+        {"tag": "6",
+         "patterns": ["What events are available today"],
+         "responses": ["Live in concent will be at UOM JJ hall"],
+         "context_set": ""
+        },
+        {"tag": "7",
+         "patterns": ["How are you","What's up"],
+         "responses": ["I'm fine, Thanks for asking.","I'm doing well","I'm fine. And you ?"],
+         "context_set": ""
+        },
+        {"tag": "8",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
+         "context_set": ""
+        },
+        {"tag": "9",
+         "patterns": ["Thank you"],
+         "responses": ["You are welcome"],
+         "context_set": ""
+        },
+
+        {"tag": "10",
+         "patterns": [" It's an ugly day today"],
+         "responses": ["I know. I think it may rain"],
+         "context_set": ""
+        },
+
+        {"tag": "11",
+         "patterns": ["It's the middle of summer, it shouldn't rain today."],
+         "responses": ["That would be weird"],
+         "context_set": ""
+        },
+
+        {"tag": "12",
+         "patterns": ["Thank you"],
+         "responses": ["You are welcome"],
+         "context_set": ""
+        },
+
+        {"tag": "13",
+         "patterns": ["Yeah, especially since it's ninety degrees outside."],
+         "responses": ["I know, it would be horrible if it rained and it was hot outside"],
+         "context_set": ""
+        },
+        {"tag": "14",
+         "patterns": ["Yes, it would be."],
+         "responses": ["I really wish it wasn't so hot every day"],
+         "context_set": ""
+        },
+        {"tag": "15",
+         "patterns": ["Me too. I can't wait until winter"],
+         "responses": ["I like winter too, but sometimes it gets too cold"],
+         "context_set": ""
+        },
+        {"tag": "16",
+         "patterns": ["I'd rather be cold than hot"],
+         "responses": ["Me too."],
+         "context_set": ""
+        },
+        {"tag": "17",
+         "patterns": ["It doesn't look very nice outside today"," In the middle of the summer, it shouldn't be raining","Considering that it's over ninety degrees outside, that would be weird","I know, you're absolutely right","That's how I feel, I want winter to come soon","I know what you mean, but I'd rather be cold than hot"],
+         "responses": ["You're right. I think it's going to rain later","That wouldn't seem right","Exactly, it wouldn't be nice if it started raining. It's too hot","I wish it would cool off one day","I enjoy the winter, but it gets really cold sometimes","That's exactly how I feel"],
+         "context_set": ""
+        },
+
+        {"tag": "18",
+         "patterns": ["Why haven't you answered the phone","That's all right","I want to do something tomorrow with you","I was thinking about seeing a movie","Until then"],
+         "responses": ["My bad, I had chores to do","What was the reason for your call","Sounds good. What did you have in mind","Okay, let's go see a movie","Talk to you later"],
+         "context_set": ""
+        },
+        {"tag": "19",
+         "patterns": ["Have you seen the new girl in school","She's really pretty","She's not too tall","She's about five feet even","She has pretty light brown eyes","So you have seen her around"],
+         "responses": ["No, I haven't","Describe her to me","Well, how tall is she","What does she look like, though","I may know which girl you're talking about","Yes, I have"],
+         "context_set": ""
+
+        },
+        {"tag": "20",
+         "patterns": ["What was wrong with you","Do you feel better now","Do you want anything to make you feel better","I hope you feel better"],
+         "responses": ["My stomach was upset","I don't really feel too well yet","No, thanks. I already took some medicine","Thank you"],
+         "context_set": ""
+        },
+        {"tag": "21",
+         "patterns": ["Did you hear the good news","I got a promotion at my job","Seriously, I am so excited","Thank you","Really","You think so"],
+         "responses": ["No, I haven't","Did you really","Well, congratulations","I'm so happy for you","Yes. You really deserved this","Yes. Good for you"],
+         "context_set": ""
+        },
+        {"tag": "22",
+         "patterns": [" Tell me, what do you enjoy doing in your spare time"],
+         "responses": ["I enjoy drawing and painting"],
+         "context_set": ""
+        },
+        {"tag": "23",
+         "patterns": ["You know how to draw and paint"],
+         "responses": ["Yes, I do."],
+         "context_set": ""
+        },
+        {"tag": "24",
+         "patterns": ["When did you learn how to do that"],
+         "responses": [" I learned back in high school"],
+         "context_set": ""
+        },
+        {"tag": "25",
+         "patterns": ["Oh, so you took an art class"],
+         "responses": ["Yeah, I loved that class"],
+         "context_set": ""
+        },
+        {"tag": "26",
+         "patterns": [" I see that you're pretty talented"],
+         "responses": ["Thank you very much"],
+         "context_set": ""
+        },
+        {"tag": "27",
+         "patterns": ["I wish I had a talent like that"],
+         "responses": ["I'm sure you have a talent. It's just hidden"],
+         "context_set": ""
+        },
+        {"tag": "28",
+         "patterns": ["What's your favorite movie"],
+         "responses": ["My favorite movie is Superbad"],
+         "context_set": ""
+        },
+        {"tag": "29",
+         "patterns": [" Oh, why is that"],
+         "responses": ["It's the funniest movie that I've ever seen"],
+         "context_set": ""
+        },
+        {"tag": "30",
+         "patterns": ["That's true. It is a very funny movie."],
+         "responses": ["You've seen it before"],
+         "context_set": ""
+        },
+
+        {"tag": "31",
+         "patterns": ["What type of music do you like to listen to"],
+         "responses": ["I like listening to different kinds of music"],
+         "context_set": ""
+        },
+        {"tag": "32",
+         "patterns": ["Like what, for instance"],
+         "responses": ["I enjoy Rock and R&B"],
+         "context_set": ""
+        },
+        {"tag": "33",
+         "patterns": ["Did you go to the basketball game on Friday"],
+         "responses": ["No, I couldn't make it"],
+         "context_set": ""
+        },
+        {"tag": "34",
+         "patterns": ["What are you doing this weekend"],
+         "responses": ["I'm going to the movies with a friend. How about you?"],
+         "context_set": ""
+        },
+        {"tag": "35",
+         "patterns": ["I'm not sure yet"],
+         "responses": ["Well, did you want to go see a movie with me"],
+         "context_set": ""
+        },
+        {"tag": "36",
+         "patterns": ["Thanks for coming to see me today"],
+         "responses": ["It's no problem. I was really missing you anyway"],
+         "context_set": ""
+        },
+        {"tag": "37",
+         "patterns": ["I missed you too"],
+         "responses": ["Why haven't you tried to come see me then"],
+         "context_set": ""
+        },
+        {"tag": "38",
+         "patterns": ["I've been really busy"],
+         "responses": ["Doing what"],
+         "context_set": ""
+        },
+        {"tag": "39",
+         "patterns": ["Working"],
+         "responses": ["I would've come to see you sooner, but I've been busy too"],
+         "context_set": ""
+        },
+        {"tag": "40",
+         "patterns": ["Well, it was nice talking to you"],
+         "responses": [" It was nice talking to you too"],
+         "context_set": ""
+        },
+        {"tag": "41",
+         "patterns": [" We should hang out some time"],
+         "responses": ["I think that would be nice"],
+         "context_set": ""
+        },
+        {"tag": "42",
+         "patterns": ["Do you want to go out to eat?"],
+         "responses": ["I'd like that"],
+         "context_set": ""
+        },
+        {"tag": "43",
+         "patterns": ["Which river flowing through the Londoan City, England"],
+         "responses": ["River Thames"],
+         "context_set": ""
+        },
+        {"tag": "44",
+         "patterns": ["Which one is the tallest tower in the world"],
+         "responses": [" Tokyo Skytree, Japan"],
+         "context_set": ""
+        },
+        {"tag": "45",
+         "patterns": ["Only continent in the world without a desert is"],
+         "responses": ["Europe"],
+         "context_set": ""
+        },
+        {"tag": "46",
+         "patterns": ["Which one is the capital of Spain"],
+         "responses": ["Madrid"],
+         "context_set": ""
+        },
+        {"tag": "47",
+         "patterns": ["Which country has the most number of lakes"],
+         "responses": ["Canada"],
+         "context_set": ""
+        },
+        {"tag": "48",
+         "patterns": ["Which country has the highest number of time zones."],
+         "responses": ["Franch"],
+         "context_set": ""
+        },
+        {"tag": "49",
+         "patterns": ["Emu bird is found in the country"],
+         "responses": ["Australia"],
+         "context_set": ""
+        },
+        {"tag": "50",
+         "patterns": ["In which country the tallest water fall of the world Angel Falls is locatd."],
+         "responses": ["Australia"],
+         "context_set": ""
+        },
+        {"tag": "51",
+         "patterns": ["In which year Hong Kond become a part of China after British Rule"],
+         "responses": ["1997"],
+         "context_set": ""
+        },
+        {"tag": "52",
+         "patterns": [" Who was First secretary general of United Nations"],
+         "responses": ["Trigve Li"],
+         "context_set": ""
+        },
+        {"tag": "53",
+         "patterns": ["Name of the first country to launch the satellite into space?"],
+         "responses": ["Russia"],
+         "context_set": ""
+        },
+        {"tag": "54",
+         "patterns": ["Emu bird is found in the country"],
+         "responses": ["Australia"],
+         "context_set": ""
+        },
+        {"tag": "55",
+         "patterns": ["Which country won first World Cup Footbal"],
+         "responses": [" Uruguay in 1930"],
+         "context_set": ""
+        },
+        {"tag": "56",
+         "patterns": ["First Woman Prime Minister Of Any Muslim Country"],
+         "responses": ["Benazir Bhutto (Pakistan)"],
+         "context_set": ""
+        },
+        {"tag": "57",
+         "patterns": ["Name of the first country to issue paper currency"],
+         "responses": ["China"],
+         "context_set": ""
+        },
+        {"tag": "58",
+         "patterns": ["Name of the first Country to make a constitution"],
+         "responses": ["USA"],
+         "context_set": ""
+        },
+        {"tag": "59",
+         "patterns": ["Who was the first person to sail around the world?"],
+         "responses": ["Ferdinand Magellan"],
+         "context_set": ""
+        },
+        {"tag": "60",
+         "patterns": ["First men to fly an airplane?"],
+         "responses": ["Wright Brothers"],
+         "context_set": ""
+        },
+        {"tag": "61",
+         "patterns": ["Name of First Woman Prime Minister of a Country"],
+         "responses": ["Mrs. Srimavo Bhandarnayake (Sri Lanka)"],
+         "context_set": ""
+        },
+        {"tag": "62",
+         "patterns": ["Who was the first woman to climb Mount Everest?"],
+         "responses": ["Junko Tabei (Japan)"],
+         "context_set": ""
+        },
+        {"tag": "63",
+         "patterns": ["Emu bird is found in the country"],
+         "responses": ["Australia"],
+         "context_set": ""
+        },
+        {"tag": "64",
+         "patterns": ["Who was the first man to set foot on the moon"],
+         "responses": ["Neil Armstrong (USA)"],
+         "context_set": ""
+        },
+        {"tag": "65",
+         "patterns": [" Name of the first man to go into space"],
+         "responses": ["Major Yuri Gagarin (USSR)"],
+         "context_set": ""
+        },
+        {"tag": "66",
+         "patterns": ["Name of first Men to climb Mt. Everest"],
+         "responses": ["Sherpa Tenzing Norgay and Sir Edmund Hillary (29th May, 1953)"],
+         "context_set": ""
+        },
+        {"tag": "67",
+         "patterns": ["Who was the first person to win the Nobel prize for Peace"],
+         "responses": ["Jin F. Dunant (Switzerland)and Frederic Peiry (France)"],
+         "context_set": ""
+        },
+        {"tag": "68",
+         "patterns": ["Who won first Nobel prize for Literature?"],
+         "responses": ["Rene F.A. and Sulli Pradhom (France)"],
+         "context_set": ""
+        },
+        {"tag": "69",
+         "patterns": ["Who won first Nobel prize for physics"],
+         "responses": ["Roentgen (Germany)"],
+         "context_set": ""
+        },
+        {"tag": "70",
+         "patterns": ["Emu bird is found in the country"],
+         "responses": ["Australia"],
+         "context_set": ""
+        }
+     
+
+   ]
+}
